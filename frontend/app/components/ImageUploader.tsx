@@ -5,6 +5,7 @@ import { useDropzone } from 'react-dropzone'
 import axios from 'axios'
 import Progress from './Progress'
 import Uploaded from './Uploaded'
+import Button from './Button'
 
 const ImageUploader: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false)
@@ -104,12 +105,7 @@ const ImageUploader: React.FC = () => {
                   <Image src="/image.svg" width={200} height={200} />
                 </div>
                 <div className="text-xl text-gray-500 my-5">Or</div>
-                <button
-                  type="button"
-                  className="bg-blue-500 text-white py-3 px-5 rounded-xl"
-                >
-                  Choose a file
-                </button>
+                <Button title="Choose a file" />
               </div>
             </div>
           </section>
