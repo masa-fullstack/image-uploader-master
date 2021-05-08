@@ -17,14 +17,8 @@ const Uploaded: React.FC<Props> = (props) => {
         <div className="md:text-3xl text-lg font-semibold text-gray-500 md:my-8 my-2">
           Uploaded Successfully!
         </div>
-        <div className="my-5">
-          <Image
-            src={props.imageURL}
-            className="rounded-3xl"
-            quality={30}
-            width={400}
-            height={400}
-          />
+        <div className="my-5 w-92 h-92">
+          <img src={props.imageURL} className="rounded-3xl max-h-96 max-w-md" />
         </div>
         <div>
           <input
