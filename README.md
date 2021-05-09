@@ -100,7 +100,7 @@ $ docker-compose run --rm web npx typeorm migration:run
 
 ```
 
-Finally, when you start Docker, the server will be listed on localhost:4001.
+Finally, the server is listed on localhost:4001.
 
 ## Acknowledgements
 
