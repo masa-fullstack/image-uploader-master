@@ -78,6 +78,7 @@ $ cd image-uploader-master/backend
 $ git clone https://github.com/masa-fullstack/image-uploader-backend
 
 # Rename directory
+rmdir api
 mv image-uploader-backend api
 
 # Change directory
@@ -85,14 +86,21 @@ $ cd ..
 
 ```
 
-Finally, when you start Docker, the server will be listed on localhost:4001.
+Then, you update "./frontend/app/.env.development.template" and "./backend/api/.env.development.template".
+
+And, you start Docker and DB miglation.
 
 ```bash
 
 # Start Docker
 $ docker-compose up
 
+# DB miglation
+$ docker-compose run --rm web npx typeorm migration:run
+
 ```
+
+Finally, when you start Docker, the server will be listed on localhost:4001.
 
 ## Acknowledgements
 
