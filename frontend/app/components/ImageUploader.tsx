@@ -30,7 +30,7 @@ const ImageUploader: React.FC = () => {
     }
 
     await axios
-      .post(`${process.env.NEXT_PUBLIC_API_URL}/image`, formData, config)
+      .post(`${process.env.NEXT_PUBLIC_API_URL}/image/upload`, formData, config)
       .then((response) => {
         setImageURL(response.data.secure_url)
       })
